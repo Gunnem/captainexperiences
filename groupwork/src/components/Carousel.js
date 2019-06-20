@@ -31,6 +31,10 @@ class Carousel extends Component {
     return document.querySelector(".image").clientWidth;
   };
 
+  calculateTranslate = () => {
+    return -(this.state.images.length - 1) * this.slideWidth();
+  };
+
   resetImages = () => {
     this.setState({
       index: 0,
@@ -39,18 +43,20 @@ class Carousel extends Component {
   };
 
   goLeft = () => {
-    const { index } = this.state;
-    const width = this.slideWidth();
+    const { index, images } = this.state;
 
     if (index === 0) {
-      return;
+      return this.setState({
+        index: images.length - 1,
+        translate: this.calculateTranslate()
+      });
     }
 
     this.setState(prevState => {
       const { index, translate } = prevState;
       return {
         index: index - 1,
-        translate: translate + width
+        translate: translate + this.slideWidth()
       };
     });
   };
