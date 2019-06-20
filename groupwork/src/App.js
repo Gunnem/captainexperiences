@@ -2,7 +2,6 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Accordion from './components/accordion';
-import React from "react";
 import Carousel from "./components/Carousel";
 import Nav from "./components/Nav";
 import Zoom from 'react-reveal/Zoom'; // Importing Zoom effect;
