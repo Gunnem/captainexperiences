@@ -11,12 +11,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Accordion />
       <Nav />
       <div className="image-carousel">
         <Zoom>
         <Carousel />
         </Zoom>
+      <Accordion />
       </div>
     </div>
   );
