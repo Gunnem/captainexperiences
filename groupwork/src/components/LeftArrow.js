@@ -1,8 +1,6 @@
 import React from "react";
 
-const LeftArrow = props => {
-  const { goLeft } = props;
-
+const LeftArrow = ({ goLeft }) => {
   return (
     <div className="left-arrow arrow" onClick={goLeft}>
       <i className="fa fa-arrow-left fa-2x" />
