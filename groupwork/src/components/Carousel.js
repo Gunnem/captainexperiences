@@ -3,22 +3,25 @@ import Image from "./Image";
 import LeftArrow from "./LeftArrow";
 import RightArrow from "./RightArrow";
 
+// this is super gross...
+import img1 from "../images/img1.jpg";
+import img2 from "../images/img2.jpg";
+import img3 from "../images/img3.jpg";
+import img4 from "../images/img4.jpg";
+import img5 from "../images/img5.jpg";
+import img6 from "../images/img6.jpg";
+import img7 from "../images/img7.jpg";
+import img8 from "../images/img8.jpg";
+import img9 from "../images/img9.jpg";
+import img10 from "../images/img10.jpg";
+import img11 from "../images/profile_pic.jpg";
+
 class Carousel extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      images: [
-        "http://lorempixel.com/400/200/sports/1/",
-        "http://lorempixel.com/400/200/sports/2/",
-        "http://lorempixel.com/400/200/sports/3/",
-        "http://lorempixel.com/400/200/sports/5/",
-        "http://lorempixel.com/400/200/sports/6/",
-        "http://lorempixel.com/400/200/sports/7/",
-        "http://lorempixel.com/400/200/sports/8/",
-        "http://lorempixel.com/400/200/sports/9/",
-        "http://lorempixel.com/400/200/sports/10/"
-      ],
+      images: [],
       index: 0,
       translate: 0
     };
@@ -68,6 +71,27 @@ class Carousel extends Component {
       };
     });
   };
+
+  // not really necessary in this scenario
+  // just trying to simulate data loaded from a db
+  componentDidMount() {
+    const images = [
+      img1,
+      img2,
+      img3,
+      img4,
+      img5,
+      img6,
+      img7,
+      img8,
+      img9,
+      img10,
+      img11
+    ];
+    this.setState({
+      images: [...images]
+    });
+  }
 
   render() {
     const { goLeft, goRight } = this;
