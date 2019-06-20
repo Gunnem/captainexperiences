@@ -87,3 +87,9 @@
 .fa-arrow-left {
   color: #000;
 }
+
+body{
+  background-image: url(../src/images/cebackground1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
